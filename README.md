@@ -13,6 +13,8 @@ dependencies:
   ringtone_player: ^0.0.1 #latest version
 ```
 
+## Usage
+
 Add following import to your code:
 
 ```dart
@@ -108,3 +110,7 @@ RingtonePlayer.play(
   volume: 0.1,
 );
 ```
+
+##License
+
+[MIT](https://github.com/cruvdev/ringtone_player/blob/master/LICENSE)

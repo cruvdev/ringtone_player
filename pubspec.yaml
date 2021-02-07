@@ -1,10 +1,9 @@
 name: ringtone_player
 description: A player for system default ringtone, alarm and notification.
-version: 0.0.1
-author: CRUV<cruv.dev@gmail.com>
+version: 0.0.2
 homepage: https://github.com/cruvdev/ringtone_player/
 repository: https://github.com/cruvdev/ringtone_player/
-issue_tracker: https://github.com/cruvdev/rakshita/issues/
+issue_tracker: https://github.com/cruvdev/ringtone_player/issues/
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
