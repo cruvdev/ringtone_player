@@ -1,0 +1,28 @@
+name: ringtone_player
+description: A player for system default ringtone, alarm and notification.
+version: 0.0.1
+author: CRUV<cruv.dev@gmail.com>
+homepage: https://github.com/cruvdev/ringtone_player/
+repository: https://github.com/cruvdev/ringtone_player/
+issue_tracker: https://github.com/cruvdev/rakshita/issues/
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: dev.cruv.ringtone_player
+        pluginClass: RingtonePlayerPlugin
+      ios:
+        pluginClass: RingtonePlayerPlugin
