@@ -10,7 +10,7 @@ Add following dependencies to your pubspec.yaml:
 
 ```yaml
 dependencies:
-  ringtone_player: ^0.0.1 #latest version
+  ringtone_player: ^0.0.3 #latest version
 ```
 
 ## Usage
