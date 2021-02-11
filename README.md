@@ -111,6 +111,6 @@ RingtonePlayer.play(
 );
 ```
 
-##License
+## License
 
 [MIT License](https://github.com/cruvdev/ringtone_player/blob/master/LICENSE)
