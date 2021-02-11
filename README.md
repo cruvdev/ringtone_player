@@ -113,4 +113,4 @@ RingtonePlayer.play(
 
 ##License
 
-[MIT](https://github.com/cruvdev/ringtone_player/blob/master/LICENSE)
+[MIT License](https://github.com/cruvdev/ringtone_player/blob/master/LICENSE)
