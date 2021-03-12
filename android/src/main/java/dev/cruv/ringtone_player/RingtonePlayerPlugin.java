@@ -13,6 +13,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
+import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /**
  * RingtonePlayerPlugin
@@ -21,6 +22,13 @@ public class RingtonePlayerPlugin implements FlutterPlugin, MethodCallHandler {
     private MethodChannel channel;
     private Context context;
 
+    /**
+     * Plugin registration.
+     */
+    public static void registerWith(Registrar registrar) {
+        final MethodChannel methodChannel = new MethodChannel(registrar.messenger(), "ringtone_player");
+        methodChannel.setMethodCallHandler(new RingtonePlayerPlugin());
+    }
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
