@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Minor Bug Fixed.
+
 ## 0.0.3
 
 * Minor Bug Fixed.
