@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'alarm_meta.dart';
@@ -27,12 +26,12 @@ class RingtonePlayer {
   ///  * [AndroidSound]
   ///  * [IosSound]
   static Future<void> play({
-    @required AndroidSound android,
-    @required IosSound ios,
-    double volume = 1.0,
-    bool loop,
-    bool alarm,
-    AlarmMeta alarmMeta,
+    required AndroidSound android,
+    required IosSound ios,
+    double? volume = 1.0,
+    bool? loop,
+    bool? alarm,
+    AlarmMeta? alarmMeta,
   }) async {
     try {
       var args = <String, dynamic>{
@@ -50,10 +49,10 @@ class RingtonePlayer {
 
   /// Play default alarm sound
   static Future<void> alarm({
-    double volume,
+    double? volume,
     bool loop = true,
     bool alarm = true,
-    AlarmMeta alarmMeta,
+    AlarmMeta? alarmMeta,
   }) async =>
       play(
         android: Android.alarm,
@@ -66,10 +65,10 @@ class RingtonePlayer {
 
   /// Play default notification sound
   static Future<void> notification({
-    double volume,
+    double? volume,
     bool loop = false,
     bool alarm = false,
-    AlarmMeta alarmMeta,
+    AlarmMeta? alarmMeta,
   }) async =>
       play(
         android: Android.notification,
@@ -81,12 +80,7 @@ class RingtonePlayer {
       );
 
   /// Play default system ringtone
-  static Future<void> ringtone(
-          {double volume,
-          bool loop = true,
-          bool alarm = false,
-          AlarmMeta alarmMeta}) async =>
-      play(
+  static Future<void> ringtone({double? volume, bool loop = true, bool alarm = false, AlarmMeta? alarmMeta}) async => play(
         android: Android.ringtone,
         ios: Ios.electronic,
         volume: volume,

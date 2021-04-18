@@ -1,9 +1,9 @@
 class AlarmMeta {
   final String launchedByIntent;
   final String drawableResourceIcon;
-  final String contentTitle;
-  final String contentText;
-  final String subText;
+  final String? contentTitle;
+  final String? contentText;
+  final String? subText;
 
   AlarmMeta(
     this.launchedByIntent,

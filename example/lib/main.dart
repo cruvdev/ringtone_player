@@ -96,10 +96,10 @@ class _MyAppState extends State<MyApp> {
 }
 
 class Button extends StatefulWidget {
-  Button({Key key, this.onPressed, this.child}) : super(key: key);
+  Button({Key? key, this.onPressed, this.child}) : super(key: key);
 
-  final VoidCallback onPressed;
-  final Widget child;
+  final VoidCallback? onPressed;
+  final Widget? child;
 
   @override
   _ButtonState createState() => _ButtonState();

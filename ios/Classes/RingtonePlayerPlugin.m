@@ -13,9 +13,9 @@
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   [SwiftRingtonePlayerPlugin registerWithRegistrar:registrar];
     FlutterMethodChannel* channel = [FlutterMethodChannel
-                                     methodChannelWithName:@"flutter_ringtone_player"
+                                     methodChannelWithName:@"ringtone_player"
                                      binaryMessenger:[registrar messenger]];
-    FlutterRingtonePlayerPlugin* instance = [[FlutterRingtonePlayerPlugin alloc] init];
+    RingtonePlayerPlugin* instance = [[RingtonePlayerPlugin alloc] init];
     [registrar addMethodCallDelegate:instance channel:channel];
 }
 
