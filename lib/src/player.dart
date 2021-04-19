@@ -80,7 +80,12 @@ class RingtonePlayer {
       );
 
   /// Play default system ringtone
-  static Future<void> ringtone({double? volume, bool loop = true, bool alarm = false, AlarmMeta? alarmMeta}) async => play(
+  static Future<void> ringtone(
+          {double? volume,
+          bool loop = true,
+          bool alarm = false,
+          AlarmMeta? alarmMeta}) async =>
+      play(
         android: Android.ringtone,
         ios: Ios.electronic,
         volume: volume,

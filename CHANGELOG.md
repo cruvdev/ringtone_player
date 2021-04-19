@@ -1,3 +1,7 @@
+## 0.1.1
+
+* Minor Bug Fixed.
+
 ## 0.1.0
 
 * Migrate to null safety.
