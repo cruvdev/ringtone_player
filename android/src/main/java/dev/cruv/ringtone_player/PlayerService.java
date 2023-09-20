@@ -99,7 +99,9 @@ public class PlayerService extends Service {
 
     private void startRingtone(PlayerMeta playerMeta) {
         ringtone = getConfiguredRingtone(playerMeta);
-        ringtone.play();
+        if(ringtone != null) {
+            ringtone.play();
+        }
     }
 
     private void createNotificationChannel() {
@@ -133,14 +135,16 @@ public class PlayerService extends Service {
         final Uri uri = getRingtoneUri(meta.getKind());
         final Ringtone ringtone = RingtoneManager.getRingtone(this, uri);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            ringtone.setLooping(meta.getLoop());
-            if (meta.getVolume() != null) {
-                ringtone.setVolume(meta.getVolume());
+        if(ringtone != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                ringtone.setLooping(meta.getLoop());
+                if (meta.getVolume() != null) {
+                    ringtone.setVolume(meta.getVolume());
+                }
             }
-        }
-        if (meta.getAlarm()) {
-            ringtone.setStreamType(AudioManager.STREAM_ALARM);
+            if (meta.getAlarm()) {
+                ringtone.setStreamType(AudioManager.STREAM_ALARM);
+            }
         }
 
         return ringtone;
